@@ -1,0 +1,51 @@
+[
+  {
+    "id": "001",
+    "name": "Adidas Running Shoes",
+    "ratings": "4.4",
+    "price": "3999.00",
+    "img": "https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?w=400"
+  },
+  {
+    "id": "003",
+    "name": "Samsung Galaxy S23",
+    "ratings": "4.6",
+    "price": "74999.00",
+    "img": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400"
+  },
+  {
+    "id": "005",
+    "name": "Apple MacBook Air M2",
+    "ratings": "4.8",
+    "price": "114999.00",
+    "img": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=400"
+  },
+  {
+    "id": "006",
+    "name": "Nike Sports Shoes",
+    "ratings": "4.3",
+    "price": "4599.00",
+    "img": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400"
+  },
+  {
+    "id": "007",
+    "name": "Boat Rockerz Bluetooth Speaker",
+    "ratings": "4.2",
+    "price": "1999.00",
+    "img": "https://images.unsplash.com/photo-1589256469067-ea99122bbdc4?w=400"
+  },
+  {
+    "id": "009",
+    "name": "Smart Fitness Watch",
+    "ratings": "4.1",
+    "price": "2999.00",
+    "img": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400"
+  },
+  {
+    "id": "010",
+    "name": "Wooden Study Table",
+    "ratings": "4.0",
+    "price": "6499.00",
+    "img": "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400"
+  }
+]

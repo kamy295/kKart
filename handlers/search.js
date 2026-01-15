@@ -1,16 +1,12 @@
 import { debounce } from "../utils/debounce.js";
 
-export function setupSearch(allProducts, renderProducts) {
+export function setupSearch(getState, updateView) {
   const search = document.querySelector(".search");
+  if (!search) return;
 
   const handleSearch = (e) => {
-    const query = e.target.value.toLowerCase().trim();
-
-    const list = query
-      ? allProducts.filter((p) => p.title.toLowerCase().includes(query))
-      : allProducts;
-
-    renderProducts(list);
+    getState().searchQuery = e.target.value.toLowerCase().trim();
+    updateView();
   };
 
   search.addEventListener("input", debounce(handleSearch, 300));

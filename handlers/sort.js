@@ -1,14 +1,11 @@
-import { sortProduct } from "../utils/sortProducts.js";
+import { applyFilters } from "../utils/applyFilters.js";
 
-export function setupSort(allProducts, renderProducts) {
+export function setupSort(getState, updateView) {
   const sortSelect = document.querySelector(".sort");
   if (!sortSelect) return;
 
   sortSelect.addEventListener("change", (e) => {
-    const value = e.target.value;
-
-    const sorted = sortProduct(allProducts, value);
-
-    renderProducts(sorted);
+    getState().sortType = e.target.value;
+    updateView();
   });
 }

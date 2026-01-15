@@ -9,7 +9,7 @@
     <!-- header -->
     <div class="header">
       <nav class="nav">
-        <h1><a href="#">K-Kart</a></h1>
+        <h1><a href="/">K-Kart</a></h1>
 
         <div class="search-container">
           <input class="search" type="text" placeholder="Search product" />
@@ -22,20 +22,34 @@
       </nav>
     </div>
 
-    <!-- sort and filter -->
-    <div class="sort-container">
-      <select class="sort">
-        <option value="">Sort By</option>
-        <option value="price-asc">Price: Low → High</option>
-        <option value="price-desc">Price: High → Low</option>
-        <option value="rating-desc">Rating: High → Low</option>
-        <option value="rating-asc">Rating: Low → High</option>
-      </select>
+    <div class="sort-and-filter-container">
+      <!-- sort and filter -->
+      <div class="sort-container">
+        <select class="sort">
+          <option value="">Sort By</option>
+          <option value="price-asc">Price: Low → High</option>
+          <option value="price-desc">Price: High → Low</option>
+          <option value="rating-desc">Rating: High → Low</option>
+          <option value="rating-asc">Rating: Low → High</option>
+        </select>
+      </div>
+
+      <div class="filter-container">
+        <select class="filter">
+          <option value="">Filter By</option>
+          <option value="beauty">Beauty</option>
+          <option value="fragrances">Fragrances</option>
+          <option value="furniture">Furniture</option>
+          <option value="groceries">Groceries</option>
+        </select>
+      </div>
     </div>
 
     <!-- products -->
     <div class="card-container"></div>
 
     <script type="module" src="./script.js"></script>
+
+    <!-- <footer class="footer">This is footer</footer> -->
   </body>
 </html>

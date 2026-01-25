@@ -1,46 +1,26 @@
 import { getProducts } from "./api/products.js";
-import { renderProducts } from "./ui/renderProducts.js";
+import { setState } from "./store/store.js";
+import { connectProducts } from "./store/connectProducts.js";
 import { setupSearch } from "./handlers/search.js";
 import { setupSort } from "./handlers/sort.js";
 import { setupFilter } from "./handlers/filter.js";
 import { setupCartNav } from "./ui/cartNav.js";
 import { initCart, setupCartHandlers } from "./handlers/cart.js";
-import { applyFilters } from "./utils/applyFilters.js";
-
-const state = {
-  allProducts: [],
-  searchQuery: "",
-  sortType: "",
-  filterType: "",
-};
-
-function getState() {
-  return state;
-}
-
-function updateView() {
-  const { allProducts, searchQuery, sortType, filterType } = state;
-  const finalList = applyFilters(
-    allProducts,
-    searchQuery,
-    sortType,
-    filterType
-  );
-  renderProducts(finalList);
-}
 
 async function main() {
-  state.allProducts = await getProducts();
+  const products = await getProducts();
 
   setupCartNav();
-  initCart(state.allProducts);
+  initCart(products);
   setupCartHandlers();
 
-  updateView(); // initial render
+  setState({ allProducts: products });
 
-  setupSearch(getState, updateView);
-  setupSort(getState, updateView);
-  setupFilter(getState, updateView);
+  connectProducts();
+
+  setupSearch();
+  setupSort();
+  setupFilter();
 }
 
 document.addEventListener("DOMContentLoaded", main);
